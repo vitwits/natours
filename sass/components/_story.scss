@@ -22,6 +22,12 @@
     transform: skewX(0);
   }
 
+  @include respondMax($phone) {
+    width: 90%;
+    padding: 3rem;
+    padding-left: 6rem;
+  }
+
   & > * {
     transform: skewX(12deg);
   }
