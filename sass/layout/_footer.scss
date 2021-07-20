@@ -3,8 +3,22 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respondMax($tab-port) {
+    padding: 7rem 0;
+  }
+
+  @include respondMax($phone) {
+    padding: 5rem 0;
+  }
+
   &__logo-box {
     text-align: center;
+    margin-bottom: 8rem;
+
+    @include respondMax($tab-port) {
+      margin-bottom: 4rem;
+    }
+
   }
 
   &__logo {
@@ -16,6 +30,10 @@
     border-top: 1px solid $color-grey-dark;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respondMax($tab-port) {
+      padding-top: 1rem;
+    }
   }
 
   &__list {

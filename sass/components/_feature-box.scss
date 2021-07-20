@@ -7,6 +7,13 @@
   box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
   transition: all .4s;
 
+  @include respondMax($tab-land) {
+    max-width: 50rem;
+    margin: 3rem auto;
+  }
+
+  
+
   &__icon {
     font-size: 6.5rem;
     margin: 2rem 0 3rem 0;

@@ -6,20 +6,78 @@
   justify-content: space-between;
   margin-right: auto;
   margin-left: auto;
+
+  @include respondMax($tab-land) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  }
 }
 
 .flex-section-about {
   flex: 0 1 54rem;
+
+  @include respondMax($tab-land) {
+    width: 70%;
+    flex: 34rem;
+  }
+
+  @include respondMax($tab-port) {
+    width: 80%;
+    flex: 30rem;
+  }
+
+  @include respondMax($phone) {
+    width: 90%;
+    flex: 25rem;
+  }
+
+  @include respondMax($iphone) {
+    width: 90%;
+    flex: 15rem;
+  }
 }
 
 .flex-section-features {
   flex: 0 1 24rem;
+
+  
 }
 
 .flex-section-tours {
   flex: 0 1 34rem;
+
+  @include respondMax($tab-land) {
+    width: 60%;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  @include respondMax($tab-land) {
+    width: 70%;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  @include respondMax($phone) {
+    width: 80%;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
 }
 
 .flex-section-footer {
-  flex: 0 1 54rem;
+  flex: 1 1 54rem;
+
+  @include respondMax($tab-land) {
+    flex: 10rem;
+    display: inline-block;
+  }
 }

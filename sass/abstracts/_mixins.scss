@@ -1,0 +1,59 @@
+//  MEDIA QUERY MANAGER 
+/* 
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+1200 - 1800 is where normal styles apply
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+$iphone: 400px;
+$phone: 600px;
+$tab_port: 900px;
+$tab_land: 1200px;
+$big_desktop: 1800px;
+
+@mixin respondMax($breakpoint) {
+  @media(max-width: $breakpoint/16px * 1em) { @content };
+}
+@mixin respondMin($breakpoint) {
+  @media(min-width: $breakpoint/16px * 1em) { @content };
+}
+
+
+// @mixin respond($phone) {
+//   @media (max-width: 37.5em)  { @content }; //600px
+// }
+// @mixin respond($tab_port) {
+//   @media (max-width: 56.25em)  { @content }; //900px
+// }
+// @mixin respond($tab_land) {
+//   @media (max-width: 75em)  { @content }; //1200px
+// }
+// @mixin respond($big_desktop) {
+//   @media (min-width: 112.5em)  { @content }; //1800px
+// }
+
+
+
+// @mixin respond($breakpoint) {
+//   @if $breakpoint == phone { @media (max-width: 37.5em) { @content };
+//   } //max-width: 600px;
+
+//   @if $breakpoint == tab-port {
+//     @media (min-width: 37.5625em) and (max-width: 56.25em) { @content }; //min-width: 601px and max-width: 900px
+//   }
+
+//   @if $breakpoint == tab-land {
+//     @media (min-width: 56.3125em) and (max-width: 75em) { @content }; //min-width:901px and max-width: 1200px 
+//   }
+
+//   @if $breakpoint == big-desktop {
+//     @media (min-width: 112.5em) { @content }; //min-width: 1800px;
+//   }
+// }
