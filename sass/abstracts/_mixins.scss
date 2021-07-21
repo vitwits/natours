@@ -19,10 +19,10 @@ $tab_land: 1200px;
 $big_desktop: 1800px;
 
 @mixin respondMax($breakpoint) {
-  @media(max-width: $breakpoint/16px * 1em) { @content };
+  @media only screen and (max-width: $breakpoint/16px * 1em) { @content };
 }
 @mixin respondMin($breakpoint) {
-  @media(min-width: $breakpoint/16px * 1em) { @content };
+  @media only screen and (min-width: $breakpoint/16px * 1em) { @content };
 }
 
 

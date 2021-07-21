@@ -57,7 +57,7 @@
   }
 
   @include respondMax($tab-land) {
-    width: 70%;
+    width: 45%;
 
     &:not(:last-child) {
       margin-bottom: 4rem;
